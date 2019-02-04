@@ -14,8 +14,6 @@ Follow the [get started](https://www.balena.io/docs/learn/getting-started/raspbe
 
 ## Enabling services
 
-## Server modules
-
 To enable services on [balena.io](https://www.balena.io/) you have to set device configuration and device service variables.
 
 ### GPIO

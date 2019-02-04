@@ -1,0 +1,24 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%:stretch as builder
+
+RUN apt-get -qq update && apt-get -qq install -y unzip wget
+
+ENV NGROK_DL="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip"
+RUN wget -q ${NGROK_DL} -O /tmp/ngrok.zip && \
+    unzip -qq /tmp/ngrok.zip -d /tmp/ngrok_dir && \
+    mv /tmp/ngrok_dir/ngrok /tmp/ngrok && \
+    chmod +x /tmp/ngrok
+
+ENV RPI_VERSION="v0.1.0"
+ENV RPI_SRV_DL="https://github.com/gbbirkisson/rpi/releases/download/${RPI_VERSION}/rpi-server_linux_arm" \
+    RPI_CLI_DL="https://github.com/gbbirkisson/rpi/releases/download/${RPI_VERSION}/rpi-client_linux_arm"
+
+RUN wget -q ${RPI_SRV_DL} -O /tmp/rpi-server && chmod +x /tmp/rpi-server && \
+    wget -q ${RPI_CLI_DL} -O /tmp/rpi-client && chmod +x /tmp/rpi-client
+
+FROM balenalib/%%BALENA_MACHINE_NAME%%:stretch
+
+COPY --from=builder /tmp/ngrok /usr/bin/ngrok
+COPY --from=builder /tmp/rpi-server /usr/bin/rpi-server
+COPY --from=builder /tmp/rpi-client /usr/bin/rpi-client
+
+CMD ["rpi-server"]

@@ -41,6 +41,6 @@ To enable services on [balena.io](https://www.balena.io/) you have to set device
 
 ## Updating rpi version
 
-1. Change `ENV RPI_VERSION="vX.X.X"` in the [Dockerfile.template](./Dockerfile.template) to your desired version.
+1. Change `ENV RPI_VERSION="vX.X.X"` in the [Dockerfile.template](https://github.com/gbbirkisson/rpi-balena/blob/master/Dockerfile.template#L11) to your desired version.
 2. Commit the change: `git commit -am "Update version"`
 3. Push to balena: `git push balena master`

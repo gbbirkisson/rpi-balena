@@ -20,7 +20,7 @@ To enable services on [balena.io](https://www.balena.io/) you have to set device
 
 * Device Service variables
     * `RPI_GPIO_ENABLED`: `true`
-    * `RPI_GPIO_OPEN`: `true` if you want to open the GPIO pins on startup
+    * `RPI_GPIO_OPEN`: `true` *(if you want to open the GPIO pins on startup)*
 
 ### Pi Camera
 
@@ -30,14 +30,14 @@ To enable services on [balena.io](https://www.balena.io/) you have to set device
 * Device Service variables
     * `RPI_PICAM_ENABLED`: `true`
     * `RPI_MODPROBE`: `bcm2835-v4l2`
-    * `RPI_PICAM_OPEN`: `true` if you want to turn on the camera on startup
+    * `RPI_PICAM_OPEN`: `true` *(if you want to turn on the camera on startup)*
 
 ### Ngrok tunnel
 
 * Device Service variables
     * `RPI_NGROK_ENABLED`: `true`
     * `RPI_NGROK_TOKEN`: `<your ngrok token>`
-    * `RPI_NGROK_REGION`: `us` if you want to use a different region 
+    * `RPI_NGROK_REGION`: `us` *(if you want to use a different region)*
 
 ## Updating rpi version
 

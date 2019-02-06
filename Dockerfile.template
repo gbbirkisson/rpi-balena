@@ -8,7 +8,7 @@ RUN wget -q ${NGROK_DL} -O /tmp/ngrok.zip && \
     mv /tmp/ngrok_dir/ngrok /tmp/ngrok && \
     chmod +x /tmp/ngrok
 
-ENV RPI_VERSION="v0.1.0"
+ENV RPI_VERSION="v0.2.0"
 ENV RPI_SRV_DL="https://github.com/gbbirkisson/rpi/releases/download/${RPI_VERSION}/rpi-server_linux_arm" \
     RPI_CLI_DL="https://github.com/gbbirkisson/rpi/releases/download/${RPI_VERSION}/rpi-client_linux_arm"
 

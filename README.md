@@ -19,7 +19,7 @@ To enable services on [balena.io](https://www.balena.io/) you have to set device
 ### GPIO
 
 * Device Service variables
-    * `RPI_GPIO`: `true`
+    * `RPI_GPIO_ENABLED`: `true`
 
 ### Pi Camera
 
@@ -27,13 +27,13 @@ To enable services on [balena.io](https://www.balena.io/) you have to set device
     * `RESIN_HOST_CONFIG_gpu_mem`: `128`
     * `RESIN_HOST_CONFIG_start_x`: `1`
 * Device Service variables
-    * `RPI_PICAM`: `true`
+    * `RPI_PICAM_ENABLED`: `true`
     * `RPI_MODPROBE`: `bcm2835-v4l2`
 
 ### Ngrok tunnel
 
 * Device Service variables
-    * `RPI_NGROK`: `true`
+    * `RPI_NGROK_ENABLED`: `true`
     * `RPI_NGROK_TOKEN`: `<your ngrok token>`
 
 ## Updating rpi version

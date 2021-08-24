@@ -1,6 +1,15 @@
-# rpi-balena
+<img align="right" width="128" height="128" src="logo.png">
+<h1>rpi-balena</h1>
 
 Repository showcasing how to deploy the [rpi-server](https://github.com/gbbirkisson/rpi) to a RaspberryPi running on [balena.io](https://www.balena.io/).
+
+- [Setting up a balena project](#setting-up-a-balena-project)
+- [Deploy rpi to balena](#deploy-rpi-to-balena)
+- [Enabling services](#enabling-services)
+  - [GPIO](#gpio)
+  - [Pi Camera](#pi-camera)
+  - [Ngrok tunnel](#ngrok-tunnel)
+- [Updating rpi version](#updating-rpi-version)
 
 ## Setting up a balena project
 
